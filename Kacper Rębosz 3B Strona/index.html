@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kacper">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Stronka</title>
+</head>
+<body >
+    <div class="Container">
+        <div class="main">
+            <nav class="menu">
+                <ul>
+                    <a href="index.html"><li id="bhome">Home</li></a>
+                    <a href="contact.html"><li id="bcontact">Contact</li></a>
+                    <a href="gallery.html"><li id="bgallery">Gallery</li></a>
+                    <a href="donate.html"><li id="bdonate">Donate</li></a>
+                </ul>
+                 
+                    <img id="mbars" class="On" src="strona/bars-solid.svg" onclick="lista()">
+                    <img id="miks" class="Off" src="strona/IKS.svg" onclick="cancel()">
+                    <div id="seriale" class="Off">
+                        <a href="peaky.html"><p id="ser1">Peaky Blinders</p></a>
+                            <div class="ml1"></div>
+                        <a href="got.html"><p id="ser2">Game of Thrones</p></a>
+                            <div class="ml2"></div>
+                        <a href="sons.html"><p id="ser3">Sons of Anarchy</p></a>
+                            <div class="ml3"></div>
+                        <a href="blacklist.html"><p id="ser4">Blacklist</p></a>
+                            <div class="ml4"></div>
+                        <a href="cards.html"><p id="ser5">House of Cards</p></a>
+                            <div class="ml5"></div>
+                        <a href="casa.html"> <p id="ser6">Casa de papel</p></a>
+                    </div>
+            </nav>
+
+        </div>
+    
+
+
+
+
+    </div>
+    <script>
+        function lista(){
+            let cancel=document.getElementById("miks");
+            let bars=document.getElementById("mbars");
+            let ser=document.getElementById("seriale");
+            if(bars.className=="On"){
+                bars.className="Off";
+                miks.className="On";
+                ser.className="On";
+            }else {
+                bars.className="On";
+            }
+        }
+        function cancel(){
+            let bars=document.getElementById("mbars");
+            let iks=document.getElementById("miks");
+            let ser=document.getElementById("seriale");
+            if(iks.className=="On"){
+                iks.className="Off";
+                bars.className="On"
+                ser.className="Off";
+            }else {
+                iks.className="On"
+            }
+        }/*
+        function czas(){
+            let date= new Date();
+            let hour= date.getHours();
+            let min=date.getMinutes();
+            let sec=date.getSeconds();
+            let day=date.getDate();
+            let month=date.getMonth();
+            let year=date.getFullYear();
+            if(min<10){
+                min="0"+min;
+            }
+            if(sec<10){
+            sec="0"+sec;
+            }
+            let dni=new Array('MON','TUE','WED','THU','FRI','SAT','SUN');
+            let showdata= year+"-"+month+"-"+day+""+dni[day];
+            let showtime= hour+":"+min+":"+sec;
+            document.getElementsByClassName("data").innerHTML=showdata;
+            document.getElementsByClassName("czas").innerHTML=showtime;
+
+            let timer=setInterval(czas, 1000);
+        } */
+       
+
+        
+    
+    /*
+        function menulista(){
+            let menulist=document.getElementById("mbars");
+            let menuiks=document.getElementById("miks");
+            if(menulist.className=="listOff"){
+                menulist.className="listOn";
+                menuiks.className="iksOn";
+            }else{
+                menulist.className="listOff";
+                menuiks.className="iksOff";
+            }
+        } */
+    </script>
+</body>
+</html>
